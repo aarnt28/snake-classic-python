@@ -1,0 +1,21 @@
+[project]
+name = "snake-classic-python"
+version = "0.1.0"
+description = "A Pygame powered recreation of the Snake Classic project"
+authors = [{name = "OpenAI Assistant"}]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pygame>=2.5",
+]
+
+[project.scripts]
+snake-classic = "snake_classic.game:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
