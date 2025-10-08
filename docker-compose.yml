@@ -1,0 +1,13 @@
+services:
+  snakeclassic:
+    build: .
+    container_name: snakeclassic
+    restart: unless-stopped
+    ports:
+      - "6272:6272"
+    environment:
+      - TZ=America/Chicago
+      - LEADERBOARD_DB_PATH=/app/data/leaderboard.db
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
